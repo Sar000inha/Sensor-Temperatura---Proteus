@@ -1,12 +1,12 @@
 [DEVICE]
 Name=P16F877A
-Clock=8000000
+Clock=4000000
 [MEMORY_MODEL]
 Value=0
 [BUILD_TYPE]
 Value=0
 [ACTIVE_TAB]
-Value=..\..\..\..\..\..\..\..\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\controle_temperatura_mikroc.c
+Value=controle_temperatura_mikroc.c
 [USE_EEPROM]
 Value=0
 [USE_HEAP]
@@ -16,15 +16,14 @@ Value=0
 [EEPROM_DEFINITION]
 Value=
 [FILES]
-File0=..\..\..\..\..\..\..\..\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\controle_temperatura_mikroc.c
-Count=1
+Count=0
 [BINARIES]
 Count=0
 [IMAGES]
 Count=0
 ActiveImageIndex=-1
 [OPENED_FILES]
-File0=..\..\..\..\..\..\..\..\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\controle_temperatura_mikroc.c
+File0=controle_temperatura_mikroc.c
 Count=1
 [EEPROM]
 Count=0
@@ -33,8 +32,7 @@ Count=0
 [OTHER_FILES]
 Count=0
 [SEARCH_PATH]
-Path0=..\..\..\..\..\..\..\..\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\
-Count=1
+Count=0
 [HEADER_PATH]
 Count=0
 [HEADERS]
@@ -44,7 +42,8 @@ Count=0
 [Useses]
 Count=0
 [EXPANDED_NODES]
-Count=0
+0=controle_temperatura_mikroc.mcppi
+Count=1
 [LIB_EXPANDED_NODES]
 Count=1
 [PROGRAMMER_TYPE]

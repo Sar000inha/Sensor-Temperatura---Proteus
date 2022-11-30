@@ -1,10 +1,5 @@
-0	1	mikroCPIC1618.exe -MSF -DBG -pP16F877A -DL -O11111114 -fo8 -N"C:\Users\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\controle_temperatura_mikroc.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\" -SP"C:\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "controle_temperatura_mikroc.c" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
-warning: 0	1501	Specified search path does not exist: 'C:\sarah\OneDrive\Documentos\MicMic\Controle de Temperatura'	 
+0	1	mikroCPIC1618.exe -MSF -DBG -pP16F877A -DL -O11111114 -fo4 -N"C:\Users\sarah\OneDrive\Documentos\MicMic\Sensor-Temperatura---Proteus\controle_temperatura_mikroc.mcppi" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" -SP"C:\Users\sarah\OneDrive\Documentos\MicMic\Sensor-Temperatura---Proteus\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC\Uses\P16\" "__Lib_Math.mcl" "__Lib_MathDouble.mcl" "__Lib_System.mcl" "__Lib_Delays.mcl"	 
 hint: 0	1139	Available RAM: 352 [bytes], Available ROM: 8192 [bytes]	 
-diagnostics: 0	122	Compilation Started	controle_temperatura_mikroc.c
-error: 32	324	Undeclared identifier 'Lcd_Init' in expression	controle_temperatura_mikroc.c
-error: 33	324	Undeclared identifier 'Lcd_Cmd' in expression	controle_temperatura_mikroc.c
-error: 34	324	Undeclared identifier 'Lcd_Cmd' in expression	controle_temperatura_mikroc.c
-error: 36	324	Undeclared identifier 'Lcd_Out' in expression	controle_temperatura_mikroc.c
-error: 40	324	Undeclared identifier 'ADC_Read' in expression	controle_temperatura_mikroc.c
-error: 0	102	Finished (with errors): 29 nov 2022, 10:23:27	controle_temperatura_mikroc.mcppi
+diagnostics: 0	127	All files Compiled in 0 ms	 
+error: 0	357	main function is not defined	main function is not defined
+error: 0	102	Finished (with errors): 30 nov 2022, 16:20:49	controle_temperatura_mikroc.mcppi

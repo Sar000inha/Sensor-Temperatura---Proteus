@@ -39,12 +39,12 @@ void main() { // funcao principal
      {
         store = ADC_Read(0);
         t_Celsius = (store*vdd*factor)/ad_resolution;
-        
+
         dezena = t_Celsius/10;
         unidade = t_Celsius % 10;
+        RB0_bit = 1;
      }
-
-} 
+}
 
 /* * PORTAS DOS COMPONENTES ELETRONICOS
  - led vermelho : RB0

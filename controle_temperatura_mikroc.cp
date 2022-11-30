@@ -1,4 +1,4 @@
-#line 1 "C:/Users/sarah/OneDrive/Documentos/MicMic/Controle de Temperatura/controle_temperatura_mikroc.c"
+#line 1 "C:/Users/sarah/OneDrive/Documentos/MicMic/Sensor-Temperatura---Proteus/controle_temperatura_mikroc.c"
 
 sbit LCD_RS at RD4_bit;
 sbit LCD_EN at RD5_bit;
@@ -30,7 +30,7 @@ void main() {
  PORTD = 0x00;
  adcon0 = 0b00000001;
 
- Lcd_Init();
+ void Lcd_Init
  Lcd_Cmd(_LCD_Cursor_Off);
  Lcd_Cmd(_LCD_CLEAR);
 
