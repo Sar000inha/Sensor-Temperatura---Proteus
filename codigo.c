@@ -85,10 +85,10 @@ void main() {
         
         disp_t;
         
-        if(((dezena==2)&&(unidade==2)&&(dec==0))||((dezena<=2)&&(unidade<=1)&&(dec<=9))||((dezena<=1)&&(unidade<=9)&&(dec<=9))){
+        if(((dezena==2)&&(unidade==4)&&(dec==0))||((dezena<=2)&&(unidade<=3)&&(dec<=9))||((dezena<=1)&&(unidade<=9)&&(dec<=9))){
           ledAzul();
         }
-        if(((dezena==2)&&(unidade==2)&&(dec>1))||((dezena==2)&&(unidade>=3)&&(dec<=9))||((dezena==3)&&(unidade<=1)&&(dec<=9))||((dezena==3)&&(unidade==2)&&(dec==0))){
+        if(((dezena==2)&&(unidade==4)&&(dec>1))||((dezena==2)&&(unidade>=4)&&(dec<=9))||((dezena==3)&&(unidade<=1)&&(dec<=9))||((dezena==3)&&(unidade==2)&&(dec==0))){
           ledVerde();
         }
         if(((dezena==3)&&(unidade==2)&&(dec>1))||((dezena==3)&&((unidade>=3)&&(unidade<=4))&&(dec<=9))||((dezena==3)&&(unidade==5)&&(dec==0))){

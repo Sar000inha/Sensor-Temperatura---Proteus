@@ -332,13 +332,13 @@ L_main3:
 	MOVLW      13
 	MOVWF      FARG_graus_pos_char+0
 	CALL       _graus+0
-;codigo.c,88 :: 		if(((dezena==2)&&(unidade==2)&&(dec==0))||((dezena<=2)&&(unidade<=1)&&(dec<=9))||((dezena<=1)&&(unidade<=9)&&(dec<=9))){
+;codigo.c,88 :: 		if(((dezena==2)&&(unidade==4)&&(dec==0))||((dezena<=2)&&(unidade<=3)&&(dec<=9))||((dezena<=1)&&(unidade<=9)&&(dec<=9))){
 	MOVF       _dezena+0, 0
 	XORLW      2
 	BTFSS      STATUS+0, 2
 	GOTO       L__main60
 	MOVF       _unidade+0, 0
-	XORLW      2
+	XORLW      4
 	BTFSS      STATUS+0, 2
 	GOTO       L__main60
 	MOVF       _dec+0, 0
@@ -352,7 +352,7 @@ L__main60:
 	BTFSS      STATUS+0, 0
 	GOTO       L__main59
 	MOVF       _unidade+0, 0
-	SUBLW      1
+	SUBLW      3
 	BTFSS      STATUS+0, 0
 	GOTO       L__main59
 	MOVF       _dec+0, 0
@@ -381,13 +381,13 @@ L__main57:
 	CALL       _ledAzul+0
 ;codigo.c,90 :: 		}
 L_main13:
-;codigo.c,91 :: 		if(((dezena==2)&&(unidade==2)&&(dec>1))||((dezena==2)&&(unidade>=3)&&(dec<=9))||((dezena==3)&&(unidade<=1)&&(dec<=9))||((dezena==3)&&(unidade==2)&&(dec==0))){
+;codigo.c,91 :: 		if(((dezena==2)&&(unidade==4)&&(dec>1))||((dezena==2)&&(unidade>=4)&&(dec<=9))||((dezena==3)&&(unidade<=1)&&(dec<=9))||((dezena==3)&&(unidade==2)&&(dec==0))){
 	MOVF       _dezena+0, 0
 	XORLW      2
 	BTFSS      STATUS+0, 2
 	GOTO       L__main56
 	MOVF       _unidade+0, 0
-	XORLW      2
+	XORLW      4
 	BTFSS      STATUS+0, 2
 	GOTO       L__main56
 	MOVF       _dec+0, 0
@@ -400,7 +400,7 @@ L__main56:
 	XORLW      2
 	BTFSS      STATUS+0, 2
 	GOTO       L__main55
-	MOVLW      3
+	MOVLW      4
 	SUBWF      _unidade+0, 0
 	BTFSS      STATUS+0, 0
 	GOTO       L__main55
