@@ -1,4 +1,4 @@
-   // LCD module connections
+// Modulo de conexoes LCD
 sbit LCD_RS at RD4_bit;
 sbit LCD_EN at RD5_bit;
 sbit LCD_D4 at RD0_bit;
@@ -12,7 +12,6 @@ sbit LCD_D4_Direction at TRISD0_bit;
 sbit LCD_D5_Direction at TRISD1_bit;
 sbit LCD_D6_Direction at TRISD2_bit;
 sbit LCD_D7_Direction at TRISD3_bit;
-// End LCD module connections
 
 #define ad_resolution 1023 // resolucao do pic16f877a
 #define vdd 5 // alimentacao ttl
@@ -26,6 +25,8 @@ unsigned char dezena, unidade, dec;
 
 const char character[] = {6,9,6,0,0,0,0,0};
 
+int i = 0;
+
 void graus(char pos_row, char pos_char) {
   char i;
     Lcd_Cmd(64);
@@ -34,29 +35,24 @@ void graus(char pos_row, char pos_char) {
     Lcd_Chr(pos_row, pos_char, 0);
 }
 
-void ledVermelho(){
+void tempAlta(int i){
      RB0_bit = 1;
      RB1_bit = 0;
      RB2_bit = 0;
      RB3_bit = 0;
+     if(i==1){RB3_bit = 1;}
 }
-void ledVerde(){
+void tempEstavel(){
      RB0_bit = 0;
      RB1_bit = 1;
      RB2_bit = 0;
      RB3_bit = 0;
 }
-void ledAzul(){
+void tempBaixa(){
      RB0_bit = 0;
      RB1_bit = 0;
      RB2_bit = 1;
      RB3_bit = 0;
-}
-void ventoinha(){
-     RB0_bit = 1;
-     RB1_bit = 0;
-     RB2_bit = 0;
-     RB3_bit = 1;
 }
 
 void main() {
@@ -86,17 +82,18 @@ void main() {
         disp_t;
         
         if(((dezena==2)&&(unidade==4)&&(dec==0))||((dezena<=2)&&(unidade<=3)&&(dec<=9))||((dezena<=1)&&(unidade<=9)&&(dec<=9))){
-          ledAzul();
+          tempBaixa();
         }
         if(((dezena==2)&&(unidade==4)&&(dec>1))||((dezena==2)&&(unidade>=4)&&(dec<=9))||((dezena==3)&&(unidade<=1)&&(dec<=9))||((dezena==3)&&(unidade==2)&&(dec==0))){
-          ledVerde();
+          i = 0;
+          tempEstavel();
         }
         if(((dezena==3)&&(unidade==2)&&(dec>1))||((dezena==3)&&((unidade>=3)&&(unidade<=4))&&(dec<=9))||((dezena==3)&&(unidade==5)&&(dec==0))){
-          ledVermelho();
+          tempAlta(i);
         }
         if(((dezena==3)&&(unidade==5)&&(dec>1))||((dezena>=3)&&(unidade>=5)&&(dec<=9))){
-          ledVermelho();
-          ventoinha();
+          i = 1;
+          tempAlta(i);
         }
         delay_ms(100);
      }

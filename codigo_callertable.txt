@@ -48,7 +48,6 @@ main
 				Delay_1us
 				Delay_5500us
 				Delay_50us
-	ledAzul
-	ledVerde
-	ledVermelho
-	ventoinha
+	tempBaixa
+	tempEstavel
+	tempAlta
